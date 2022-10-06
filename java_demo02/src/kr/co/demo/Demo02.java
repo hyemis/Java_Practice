@@ -22,7 +22,7 @@ public class Demo02 {
 		Y = 20; // 초기화 후 . 한번 초기화 후 다시 초기화 불가능 
 		System.out.print(Y);
 		
-		// Y =30; 수정 
+		// Y =30; 수정함.
 	}
 
 }
