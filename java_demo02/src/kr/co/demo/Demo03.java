@@ -37,8 +37,7 @@ public class Demo03 {
 		System.out.println(st3);
 		System.out.println(st4);
 		System.out.println(st5);
-		System.out.println(st6);
-		
+		System.out.println(st6); // 수정함		
 	}
 
 }
