@@ -31,16 +31,16 @@ public class Demo01 {
 		// 논리연산
 		boolean b1 = true;
 		boolean b2 = false;
-		
-		System.out.println("논리 연산 true && true 결과 ->" + (b1 && b2));
+		// 둘 다 true 일 때만 true 반환
+		System.out.println("논리 연산 true && true 결과 ->" + (b1 && b1));
 		System.out.println("논리 연산 true && false 결과 ->" + (b1 && b2));
-		System.out.println("논리 연산 false && true 결과 ->" + (b1 && b2));
-		System.out.println("논리 연산 false && false 결과 ->" + (b1 && b2));
-		
-		System.out.println("논리 연산 true || true 결과 ->" + (b1 || b2));
+		System.out.println("논리 연산 false && true 결과 ->" + (b2 && b1));
+		System.out.println("논리 연산 false && false 결과 ->" + (b2 && b2));
+		// 둘 중 하나만 true 여도 true 반환, 아니면 false 반환
+		System.out.println("논리 연산 true || true 결과 ->" + (b1 || b1));
 		System.out.println("논리 연산 true || false 결과 ->" + (b1 || b2));
-		System.out.println("논리 연산 false || true 결과 ->" + (b1 || b2));
-		System.out.println("논리 연산 false || false 결과 ->" + (b1 || b2));
+		System.out.println("논리 연산 false || true 결과 ->" + (b2 || b1));
+		System.out.println("논리 연산 false || false 결과 ->" + (b2 || b2));
 		
 		// 증감연산
 		int z1 = 10;
