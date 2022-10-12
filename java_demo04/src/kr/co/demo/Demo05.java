@@ -55,6 +55,9 @@ public class Demo05 {
 			i++;
 		}
 		
+		
+		// 구구단 
+		
 		i = 1;
 		while(i <= 9) {
 			int j = 1;
@@ -66,6 +69,14 @@ public class Demo05 {
 			i++;
 		}
 		
+		/*
+		 * do ~ while 
+		 * 		일단 1회 반복은 수행한다.
+		 * 
+		 * do {
+		 * 		반복 실행 코드;
+		 * } while (조건식);
+		 */
 	}
 
 }
