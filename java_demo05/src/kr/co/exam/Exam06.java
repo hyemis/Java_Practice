@@ -1,5 +1,6 @@
 package kr.co.exam;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Exam06 {
@@ -23,10 +24,15 @@ public class Exam06 {
 				// 배열 추가. 본래 배열의 길이보다 1 큰 길이의 배열. 
 				int tmp[] = new int[odd.length + 1];
 				
+				/*
 				for(int j = 0; j < odd.length; j++) {
 					tmp[j] = odd[j];
 				}
-				tmp[tmp.length - 1] = num;  //모르겠음.ㅠㅠ
+				*/
+				
+				System.arraycopy(odd,0,tmp,0,odd.length);
+				
+				tmp[tmp.length - 1] = num;   // 복사 배열에 새로운 데이터 추가. 
 				
 				odd = tmp;
 				
