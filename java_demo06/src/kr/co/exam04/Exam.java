@@ -18,6 +18,8 @@ public class Exam {
 		
 			// 매개변수가 있는 생성자
 			Record r = new Record("국어", 87.5); 
+			System.out.println(r.toString());
+			
 			
 			System.out.println(r.getclassName());
 			System.out.println(r.getScore());
@@ -38,12 +40,19 @@ public class Exam {
 			
 			System.out.println(s.getGradeTable());
 			
+			// 이미 중복된 과목인 과학, 수학은 추가가 되지 않았지만 중복 없는 과학은 추가됨. 
 			s.addRecord("과학", 90);
 			s.addRecord("수학", 100);
 			s.addRecord("국어", 50);
 			System.out.println(s.getGradeTable());
-
 			
+			// 수학 과목명을 삭제. 
+			s.removeRecord("수학");
+			System.out.println(s.getGradeTable());
+
+			// 객체 이용
+			Record r1 = s.getRecord("영어");
+			System.out.println(r1.getclassName() + "\t");
 			
 	}
 
