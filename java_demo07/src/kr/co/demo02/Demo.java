@@ -32,8 +32,9 @@ public class Demo {
 		System.out.println(p1);
 		System.out.println(p1.toString());
 		
-		// p1과 p2를 이름만 가지고 동일한지 비교 참조주소 비교/ 값 비교 
+		// p1과 p2를 비교 참조주소 비교/ 값 비교 
 		System.out.println(p1 == p2);
+		// 이름만 같아서는 안되고 나이, 성별도 같아야 true값을 반환하도록 구현. 
 		System.out.println(p1.equals(p2));
 	}
 
