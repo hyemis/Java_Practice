@@ -94,6 +94,7 @@ GROUP BY JOB_ID, COMMISSION_PCT ;
  * 				그룹으로 묶기 위한 조건이 1개 이상인 경우에 사용하여 
  * 				그룹별 집계 외에 단일 그룹별 집계 / 복수개의 그룹별 집계 / 총 집계
  * 				까지 나타낸다. 
+ *  				ROLLUP에 작성된 컬럼 순서대로 
  */
 SELECT JOB_ID 
 			, COMMISSION_PCT 
@@ -114,3 +115,32 @@ FROM EMPLOYEES
 WHERE COMMISSION_PCT IS NOT NULL 
 GROUP BY CUBE  (JOB_ID, COMMISSION_PCT) 
 ORDER BY 1  NULLS FIRST, 2  NULLS LAST;
+
+/*
+* GROUPING : ROLLUP, COBE 로 집계한 결과에 대해 어떠한 조합으로 그룹을 
+* 					묶었는지 알 수 있도록 도와주는 함수 (SELECT 절에 사용)
+* 					함수의 반환값이 0 이면 그룹에 포함된 것이며, 1이면 포함이 안된 것이다.
+*/
+SELECT JOB_ID 
+			, COMMISSION_PCT 
+			, COUNT(*) AS 수  
+			, CASE WHEN GROUPING(JOB_ID) = 0 AND GROUPING(COMMISSION_PCT) = 1 THEN '직무그룹'
+						WHEN GROUPING(COMMISSION_PCT) = 0 AND GROUPING(JOB_ID) = 0 THEN '직무/커미션그룹'
+						ELSE '총계'
+						END AS 그룹구분
+FROM EMPLOYEES
+WHERE COMMISSION_PCT IS NOT NULL 
+GROUP BY ROLLUP (JOB_ID, COMMISSION_PCT) ;
+
+SELECT JOB_ID 
+			, COMMISSION_PCT 
+			, COUNT(*) AS 수  
+			, CASE WHEN GROUPING(JOB_ID) = 0 AND GROUPING(COMMISSION_PCT) = 1 THEN '직무그룹'
+						WHEN GROUPING(JOB_ID) = 1 AND GROUPING(COMMISSION_PCT) = 0 THEN '커미션그룹'
+						WHEN GROUPING(COMMISSION_PCT) = 0 AND GROUPING(JOB_ID) = 0 THEN '직무/커미션그룹'
+						ELSE '총계'
+						END AS 그룹구분
+FROM EMPLOYEES
+WHERE COMMISSION_PCT IS NOT NULL 
+GROUP BY CUBE  (JOB_ID, COMMISSION_PCT) ;
+
