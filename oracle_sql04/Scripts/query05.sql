@@ -233,14 +233,42 @@ SELECT * FROM EMPLOYEES;
   * 			- 공지를 작성할 때 다음의 정보가 저장되어야 한다. 
   * 			 	번호, 제목, 내용, 작성일자, 부서ID
   */
+CREATE TABLE NOTICE(
+       ID NUMBER PRIMARY KEY
+     , TITLE VARCHAR2(250) NOT NULL
+     , CONTENT VARCHAR2(2000)
+     , WRITE_DATE DATE
+     , DEPT_ID NUMBER
+);
+
+INSERT INTO NOTICE VALUES(1, '전체 공지입니다.', '모든 부서에서 확인할 수 있습니다.', SYSDATE, 0);
+
+SELECT * FROM NOTICE;
+
 /*
  * 사내 공지 게시판 테이블을 생성 후에 다음의 공지를 추가로 작성한다.
  *     - 모든 부서마다 'xxx 부서만 확인할 수 있는 공지 입니다.' 라는 메시지를 추가한다.
  */
+INSERT INTO NOTICE(
+       SELECT ROWNUM + 1 AS ID
+            , DEPARTMENT_NAME_KR || ' 부서 공지' AS TITLE
+            , DEPARTMENT_NAME_KR || ' 부서만 확인할 수 있는 공지 입니다.' AS CONTENT
+            , SYSDATE AS WRITE_DATE
+            , DEPARTMENT_ID AS DEPT_ID
+         FROM DEPARTMENTS
+);
+SELECT * FROM NOTICE;
 /*
  * 100 번 사원이 공지를 열람한다는 가정하에 100 번 사원이 소속된 부서의 공지와 전체 공지가
  * 보일수 있는 SELECT 쿼리문을 작성하세요.
  */
+-- 100번 사원이 조회/  추가로 전체 공지를 조회함
+SELECT *
+FROM NOTICE N
+LEFT OUTER JOIN EMPLOYEES E 
+ON N.DEPT_ID = E.DEPARTMENT_ID 
+WHERE E.EMPLOYEE_ID = 100
+OR N.DEPT_ID = 0;
 /*
  * 공지 게시판에 중요도 기능을 추가하여 가장 중요한 공지가 가장 먼저 조회될 수 있도록 테이블을
  * 수정하도록 한다.
@@ -250,3 +278,27 @@ SELECT * FROM EMPLOYEES;
  *     - 추가한 공지 데이터를 조회할 때 중요도 순으로 조회가 될 수 있도록
  *       SELECT 구문을 작성한다.
  */
+-- 테이블에 새로운 컬럼 ORD(중요도) 추가 (숫자 1개를 값을 가짐, 기본 3이라는 숫자로 세팅)
+ALTER TABLE NOTICE ADD ORD NUMBER(1) DEFAULT(3);
+-- ORD에 CHECK 로 제약 조건 설정, ORD는 1 ~ 5 사이 범위의 숫자만 가질 수 있다
+ALTER TABLE NOTICE ADD CONSTRAINTS NOTICE_ORD_CK CHECK(ORD BETWEEN 1 AND 5);
+
+-- 제약 조건 설정 되었는지 확인
+SELECT * FROM USER_CONSTRAINTS WHERE TABLE_NAME = 'NOTICE';
+
+-- DEPT_ID = 0 번(전체공지)에게 ORD 1 번 부여 
+UPDATE NOTICE 
+SET ORD = 1
+WHERE DEPT_ID = 0;
+
+-- 사원 테이블과 공지 테이블을 부서 번호로 조인해서 사번이 100번 이거나 부서 번호가 0번인 레코드를 ORD 순으로 출력
+SELECT *
+FROM NOTICE N
+LEFT OUTER JOIN EMPLOYEES E 
+ON N.DEPT_ID = E.DEPARTMENT_ID 
+WHERE E.EMPLOYEE_ID = 100
+OR N.DEPT_ID = 0
+ORDER BY ORD;
+-- 중요도 동률일 경우 추가 정렬 방식 적용 ORDER BY ORD, ID;
+
+SELECT * FROM NOTICE;
