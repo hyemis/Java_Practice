@@ -33,36 +33,6 @@ GROUP BY DEPARTMENT_ID;
  *  3. 년도 구분 없이 1/4 분기, 2/4분기, 3/4분기 4/4분기 별 입사자의 수를 구하시오.
  */
 
-SELECT CASE WHEN EXTRACT(MONTH FROM HIRE_DATE) >= 1 AND EXTRACT(MONTH FROM HIRE_DATE) < 4 THEN '1/4분기'
-		    WHEN EXTRACT(MONTH FROM HIRE_DATE) >= 4 AND EXTRACT(MONTH FROM HIRE_DATE) < 7 THEN '2/4분기'
-		    WHEN EXTRACT(MONTH FROM HIRE_DATE) >= 7 AND EXTRACT(MONTH FROM HIRE_DATE) < 10 THEN '3/4분기'
-		    WHEN EXTRACT(MONTH FROM HIRE_DATE) >= 10 AND EXTRACT(MONTH FROM HIRE_DATE) <= 12 THEN '4/4분기'
-	 	END 분기 
-	 ,  COUNT(*)
-FROM EMPLOYEES
-GROUP BY EXTRACT(MONTH FROM HIRE_DATE);
-
-SELECT DECODE( EXTRACT(MONTH FROM HIRE_DATE))
-							, 1, 1, 2, 1, 3, 1
-							, 4, 2, 5, 2, 6, 2
-							, 7, 3, 8, 3, 9, 3
-							, 10, 4, 11, 4, 12,  4) AS 분기
-		  , COUNT(*) AS 입사자수 
-	FROM EMPLOYEES
-GROUP BY DECODE( EXTRACT(MONTH FROM HIRE_DATE)
-							, 1, 1, 2, 1, 3, 1
-							, 4, 2, 5, 2, 6, 2
-							, 7, 3, 8, 3, 9, 3
-							, 10, 4, 11, 4, 12,  4)
-ORDER BY 1;
-
-SELECT DECODE(EXTRACT(MONTH FROM HIRE_DATE)
-							, 1, 1, 2, 1, 3, 1
-							, 4, 2, 5, 2, 6, 2
-							, 7, 3, 8, 3, 9, 3
-							, 10, 4, 11, 4, 12, 4) AS 분기
-				, COUNT(*) AS 입사자수
-FROM EMPLOYEES
 GROUP BY DECODE(EXTRACT(MONTH FROM HIRE_DATE)
 							, 1, 1, 2, 1, 3, 1
 							, 4, 2, 5, 2, 6, 2

@@ -4,13 +4,13 @@
  * 		  특정 그룹에 대한 집계가 이루어 질 수 있도록 그룹을 묶어주는 역할 수행 
 */
 SELECT COUNT(DEPARTMENT_ID)
-FROM EMPLOYEES
+FROM EMPLOYEES;
 
-SELECT  DEPARTMENT_ID 
-			, COUNT(DEPARTMENT_ID)  부서별 총원
+SELECT DEPARTMENT_ID 
+			, COUNT(DEPARTMENT_ID) 부서별총원
 			, MAX(SALARY) 부서별최고급여액
-			, MIN(SALARY)  부서별최저급여약
-			, ROUND(AVG(SALARY) , 2)  부서별평균급여액
+			, MIN(SALARY) 부서별최저급여액
+			, ROUND(AVG(SALARY), 2) 부서별평균급여액
 FROM EMPLOYEES
 GROUP BY DEPARTMENT_ID;
 

@@ -22,7 +22,7 @@
  * 		참고 : 여러 컬럼 값을 한번에 수정할 수 있다. 
  * 
  * DELETE
- * 		UPDATE FROM <테이블명>;
+ * 		DELETE FROM <테이블명>;
  * 		주의 : 테이블의 모든 Record가 삭제된다.
  * 
  * 		UPDATE FROM <테이블명> WHERE <컬럼명>  <연산자> <값>;

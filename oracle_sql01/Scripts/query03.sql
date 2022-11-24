@@ -20,8 +20,7 @@ SELECT * FROM REGIONS;
  * 사원테이블에서 SALARY  정보가 3,000 이하인 사원은 사번, 이름을 조회하세요.
  */
 SELECT FIRST_NAME || ' ' || LAST_NAME AS 이름
-			, EMPLOYEE_ID 
-			, SALARY
+			, EMPLOYEE_ID AS 사번
 	FROM EMPLOYEES 
 	WHERE SALARY <= 3000;
 	
@@ -29,8 +28,8 @@ SELECT FIRST_NAME || ' ' || LAST_NAME AS 이름
 * 사원테이블에서 DEPARTMENT_ID 가 50 인 사원은 사번, 이름, 직무를 조회하세요. 
 */
 SELECT  FIRST_NAME || ' ' || LAST_NAME AS 이름
-			, EMPLOYEE_ID
-			, JOB_ID
+			, EMPLOYEE_ID AS 사번
+			, JOB_ID 
 	FROM EMPLOYEES
 	WHERE DEPARTMENT_ID = 50;
 	
@@ -47,8 +46,8 @@ SELECT DEPARTMENT_ID
 * 직무 테이블에서 JOB_TITLE 의 값에 Manager 가 포함된 결과를 조회하세요.
 * 직무, 직무명 컬럼만 Record Set 에 반환하세요. 
 */
-SELECT JOB_ID
-			, JOB_TITLE
+SELECT JOB_ID AS 직무ID
+			, JOB_TITLE AS 직무명
 	FROM JOBS 
 	WHERE JOB_TITLE LIKE '%Manager';
 
@@ -58,5 +57,25 @@ SELECT JOB_ID
 SELECT DISTINCT MANAGER_ID
 FROM EMPLOYEES;
 
+/*
+ * 사원 테이블에서 EMAIL 칼럼만 출력할 때 "@emp.co.kr" 이 추가로 붙어서 나오게 하세요.
+ */
+SELECT EMAIL || '@emp.co.kr' AS 이메일
+FROM EMPLOYEES;
 
-	
+/*
+ * 사원 테이블에서 전화번호 형식이 xxx.xxx.xxxx에 해당하는 정보만 Record Set 으로 반환되어 나오도록 하세요.
+ */
+SELECT PHONE_NUMBER AS 전화번호
+FROM EMPLOYEES
+WHERE PHONE_NUMBER LIKE '___.___.____';
+
+/*
+* 사원 테이블에서 COMMISIION_PCT 가 NULL 이 아닌 데이터들만 조회되게 하고 SALARY 를 출력할 때
+* COMMISSION_PC가 포함된 SALARY 결과가 나오게 하세요. 
+*/
+SELECT SALARY AS 급여
+			, SALARY *( 1+COMMISSION_PCT ) AS "급여(커미션 포함)"
+			, COMMISSION_PCT AS 커미션
+FROM EMPLOYEES
+WHERE COMMISSION_PCT IS NOT NULL;

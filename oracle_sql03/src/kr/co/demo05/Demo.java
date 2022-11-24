@@ -1,4 +1,4 @@
-package kr.co.demo01;
+package kr.co.demo05;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -8,6 +8,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+
+import kr.co.db.vo.EmployeeVO;
 
 public class Demo {
 
@@ -51,18 +54,20 @@ public class Demo {
 	
 	// ResultSet 에서 값 추출 
 	SimpleDateFormat df = new SimpleDateFormat("yyyy년 MM월 dd일");
-	
-	System.out.println("|ID | FIRST_NAME | LAST_NAME      | HIRE_DATE   |");
-	System.out.println("+---+------------+----------------+-------------+");
+	ArrayList<EmployeeVO> empArray = new ArrayList<EmployeeVO>();
 	
 	while(rs.next())	{
-		int id = rs.getInt("EMPLOYEE_ID");
-		String fName = rs.getString("FIRST_NAME");
-		String lName = rs.getString("LAST_NAME");
-		Date hireDate = rs.getDate("HIRE_DATE");
 		
-		System.out.printf("%d | %10s | %15s | %s | \n", id, fName, lName, df.format(hireDate));
+		EmployeeVO emp = new EmployeeVO();
+		emp.setEmpId(rs.getInt("EMPLOYEE_ID"));
+		emp.setFirstName(rs.getString("FIRST_NAME"));
+		emp.setLastName(rs.getString("LAST_NAME"));
+		emp.setHireDate(rs.getDate("HIRE_DATE"));
+		empArray.add(emp);
 	}
+		
+	System.out.println(empArray);
+	
 	// Database 관련 연결 정보 Close (가장 마지막에 생성된 객체부터 닫아야함)
 	rs.close();
 	stat.close();	
