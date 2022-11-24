@@ -60,7 +60,6 @@ SELECT * FROM USER1.SAM;
 
 
 /*공개 동의어 테스를 위한 샘플 테이블 생성(USER1 에서 생성할 것)*/
-
 CREATE TABLE PUBLIC_SAMPLE(
 			ID NUMBER PRIMARY KEY 
 		, 	NAME VARCHAR2(50)
@@ -87,6 +86,11 @@ SELECT * FROM PSAM; /*더 이상 USER1 과 같은 사용자계정 스키마가 �
 
 /*동의어 생성 정보 조회*/
 SELECT * FROM ALL_SYNONYMS WHERE TABLE_OWNER = 'USER1';
+
+/* 다른 사용자에게 부여한 또는 부여 받은 권한 정보 확인 가능*/
+SELECT * FROM USER_TAB_PRIVS;
+
+
 /*
  * USER1 계정에서 다른 계정이 테이블을 조회 할 수 있도록 권한을 부여 
  * 실제 테이블명으로 권한을 부여하거나 동의어를 사용하여 권한을 부여하면 됨. 
