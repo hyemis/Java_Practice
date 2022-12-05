@@ -45,4 +45,63 @@ public class AccountDAO {
 		sess.rollback();
 		return false;
 	}
+	
+	public boolean updateReqAccount(int id) {
+		int result = sess.update("test.updateReqAccount", id);
+		if(result == 1) {
+			AccountVO data = sess.selectOne("test.reqAccountId", id);
+			data.setPassword("samplepassword");
+			result = sess.insert("test.insertAccount", data);
+			if(result == 1) {
+				sess.commit();
+				return true;
+			}
+		}
+		sess.rollback();
+		return false;
+	}
+
+	public AccountVO selectAccount(AccountVO data) {
+		AccountVO result = sess.selectOne("test.selectAccount", data);
+		
+		if(result != null) {
+			int cnt = sess.update("test.updateLoginDate",result);
+			if(cnt == 1) {
+				cnt = sess.insert("test.insertLoginAccessLog", result);
+				if(cnt == 1) {
+					sess.commit();
+				} else {
+					sess.rollback();
+				}
+			} else {
+				sess.rollback();
+			}
+		}
+		
+		return result;
+	}
+
+	public boolean insertLoginAccessLog(AccountVO user) {
+		int result = sess.insert("test.insertLogoutAccessLog", user);
+		if(result == 1) {
+			sess.commit();
+			return true;
+		} 
+		sess.rollback();
+		return false;
+	}
+
+	public boolean updateAccountPassword(AccountVO data) {
+		int result = sess.update("test.updateAccountPassword", data);
+		if(result == 1) {
+			result = sess.insert("test.insertLogoutAccessLog", data);
+			if(result == 1) {
+				sess.commit();
+				return true;
+			}
+		}
+		sess.rollback();
+		return false;
+	}
+
 }
