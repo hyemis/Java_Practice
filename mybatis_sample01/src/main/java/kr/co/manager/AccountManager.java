@@ -22,6 +22,7 @@ public class AccountManager {
 		}
 		System.out.println("[5] 패스워드 변경");
 		System.out.println("[9] 프로그램 종료");
+		
 		int menu = 0;
 		while(true) {
 			System.out.print("메뉴 번호 입력 : ");
@@ -60,10 +61,10 @@ public class AccountManager {
 		}
 	}
 
-	private void logout() {
+	
+	private void getAccountRequestList() {
 		AccountController ac = new AccountController();
-		ac.logout(this.user);
-		this.user = null;
+		ac.getAccountRequest();
 	}
 
 	private void setAccountRequest() {
@@ -78,10 +79,6 @@ public class AccountManager {
 		ac.setAccountRequest(nickname, email);
 	}
 	
-	private void getAccountRequestList() {
-		AccountController ac = new AccountController();
-		ac.getAccountRequest();
-	}
 	
 	private void acceptAccountRequest() {
 		AccountController ac = new AccountController();
@@ -112,6 +109,12 @@ public class AccountManager {
 		String password = sc.nextLine();
 		
 		this.user = ac.login(nickname, password);
+	}
+	
+	private void logout() {
+		AccountController ac = new AccountController();
+		ac.logout(this.user);
+		this.user = null;
 	}
 	
 	private void changePassword() {
