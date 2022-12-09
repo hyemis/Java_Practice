@@ -1,0 +1,49 @@
+.fs1 {
+    font-size: 0.5em;
+    /*브라우저의 기본 크기(12pt, 16px)에 대한 상대 크기 단위 em */
+}
+
+.fw1 {
+    font-weight: 900;
+}
+
+.fs2 {
+    font-style: italic;
+}
+
+.ff1 {
+    font-family: '견고딕';
+}
+
+.c1{
+    color: rgba(113, 56, 91, 0.7);
+}
+
+.td1 a {
+    text-decoration: none;
+}
+
+.ts1 {
+    /*           가로 세로 번짐 색상*/
+    text-shadow: 5px 3px 2px gray;
+}
+
+.ta1-left {
+    text-align: left;
+}
+
+.ta1-right {
+    text-align: right;
+}
+
+.ta1-center{
+    text-align: center;
+}
+
+.ta1-justify {
+    text-align: justify;
+}
+
+.lh1 {
+    line-height: 30px;
+}
