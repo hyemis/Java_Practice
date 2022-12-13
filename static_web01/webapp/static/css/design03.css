@@ -1,3 +1,4 @@
+/* 전체의 버튼 모양 설정*/
 button {
     margin: 0;
     padding: 0.5em 1em 0.5em 1em;
@@ -5,36 +6,42 @@ button {
     box-sizing: border-box;
 }
 
+/*버튼을 블럭으로 설정*/
 button.block {
     display: block;
     width: 100%;
 }
 
+/*버튼 호버 설정 */
 button:hover { 
     cursor:pointer;
 }
 
-
+/*확인 버튼 스타일 설정*/
 .btn-ok {
     background-color: cornflowerblue;
     color: white;
 }
 
+/*확인 버튼 호버 설정*/
 .btn-ok:hover {
     background-color: rgb(86, 127, 204);
     color: white;
 }
 
+/*취소 버튼 스타일 설정*/
 .btn-cancle {
     background-color: crimson;
     color: white;
 }
 
+/*취소 버튼 호버 설정*/
 .btn-cancle:hover {
     background-color: rgb(189, 17, 51);
     color: white;
 }
 
+/*모든 input 스타일 설정*/
 input {
     padding: 0.5em;
     outline-style: none;
@@ -44,6 +51,8 @@ input {
     box-sizing: border-box;
 }
 
+/*모든 input 호버, 포커스 설정 
+  마우스 가져다 댔을 때, 입력 활성화 시 스타일 변경*/
 input:hover,
 input:focus
  {
@@ -51,14 +60,17 @@ input:focus
     border-style: solid;
 }
 
+/*텍스트블럭 설정*/
 .input-text.block {
     width: 100%;
 }
 
+/*체크 박스, 라디오 박스 안보이게 설정 (스타일 직접 적용 위함)*/
 .input-check, .input-radio {
     display: none;
 }
 
+/*체크 박스 스타일 설정*/
 .check-form {
     display: inline-block;
     border-style: solid;
@@ -67,6 +79,7 @@ input:focus
     width: 10px; height: 10px;
 }
 
+/*라디오 스타일 설정*/
 .radio-form {
     display: inline-block;
     border-style: solid;
@@ -76,20 +89,22 @@ input:focus
     border-radius: 50%;
 }
 
+/*체크박스 체크 시 박스 색상 변경*/
 .input-check:checked ~ .check-form {
     background-color: rgb(73, 131, 237);
     border-color: rgb(73, 131, 237);
     position: relative;
 }
 
+/*체크박스 체크된 후에 컨테츠 포함*/
 .input-check:checked ~ .check-form::after {
     content: "V";
     position: absolute;
     left: 0.3px; top: -6px;
     color: white;
-}
+} 
 
-
+/*라디오박스 체크 시 색상 변경 */
 .input-radio:checked ~ .radio-form {
     background-color: rgb(73, 131, 237);
     border-color: rgb(73, 131, 237);
@@ -103,3 +118,4 @@ input:focus
     left: 0.1px; top: -3px;
     color: white;
 }
+
