@@ -19,3 +19,155 @@
     color: rgb(2, 136, 180);
 }
 
+.side-nav .menu {
+    width: 80px;
+    list-style-type: none;
+    background-color: blanchedalmond;
+    padding-inline-start: 0px;
+    box-sizing: border-box;
+}
+
+.side-nav .menu-link{
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+}
+
+.side-nav .menu-link:hover {
+    background-color: rgba(230, 213, 187, 0.87);
+}
+
+.side-nav .active {
+    background-color: navajowhite;
+}
+/* 배경색 지정 */
+.dropdown-nav .dropdown-menu {
+    background-color: rgb(43, 42, 42);
+}
+/* 블릿 제거*/
+.dropdown-nav .dropdown-menu,
+.dropdown-nav .sub-menu {
+    list-style-type: none;
+}
+/* 요소 자신을 기준으로 배치*/
+.dropdown-nav .dropdown-menu .dropdown{
+    position: relative;
+}
+/* 인라인 블럭 : 컨텐츠 크기만큼 차지 설정 */
+.dropdown-nav .menu-item,
+.dropdown-nav .menu-link {
+    display: inline-block;
+}
+
+/* 메뉴1,2,3 에 대한 스타일 속성 설정 */
+.dropdown-nav .menu-link {
+    text-decoration: none;
+    padding: 16px;
+    background-color:rgb(43, 42, 42);
+    color: white;
+}
+
+/* 메뉴2의 서브 메뉴에 대한 스타일 속성 설정*/
+.dropdown-nav .sub-menu {
+    display: none;
+    /*position: absolute; 자유 배치 가능하도록 요소의 영역들이 빠지게 된다. 
+     body 에 대한 absolute */
+    position: absolute;
+    left: 0px;
+    top: 53px;
+    padding-inline-start: 0px;
+    width: 80px;
+    box-shadow: 3px 2px 6px 0px gray;
+}
+
+/* 메뉴2의 서브 메뉴에 대한 크기 설정 */
+.dropdown-nav .sub-menu .sub-item,
+.dropdown-nav .sub-menu .sub-link {
+    display: block;
+    box-sizing: border-box;
+}
+
+/* 메뉴2의 서브 메뉴의 글자에 대한 스타일 속성 설정*/
+.dropdown-nav .sub-menu .sub-link {
+    text-decoration: none;
+    border-width: 1px;
+    padding: 8px;
+    color: black;
+}
+
+/* 메뉴1,2,3에 대한 호버 설정*/
+.dropdown-nav .menu-item:hover,
+.dropdown-nav .menu-link:hover {
+    background-color: rgba(51, 59, 82, 0.637);
+}
+
+/* 메뉴2의 서브 메뉴에 대한 호버 설정 */
+.dropdown-nav .sub-menu .sub-link:hover {
+    background-color: rgba(105, 105, 105, 0.61);
+}
+
+/*호버들에 대해 인라인블럭 설정 */
+.dropdown-nav .dropdown-menu .menu-item:hover .sub-menu,
+.dropdown-nav .dropdown-menu .menu-item:hover .sub-link{
+    display : inline-block;
+    background-color: white;
+}
+
+/* 메뉴 1,2,3 위치 설정*/
+.side-dropdown-nav .side-dropdown-menu {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    width: 200px;
+}
+
+/* 메뉴 1,2,3 색상, 박스 설정*/
+.side-dropdown-nav .menu-item {
+    box-sizing: border-box;
+    background-color: rgb(43, 42, 42) ;
+}
+
+/* 메뉴 1,2,3 블럭에 마우스 올릴 시 색상 번경*/
+.side-dropdown-nav .menu-item:hover {
+    background-color: rgba(105, 105, 105, 0.61);
+}
+
+/* 메뉴 1,2,3 박스 설정, 스타일 설정  */
+.side-dropdown-nav .menu-link {
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+}
+
+/* 메뉴 2의 서브 메뉴 밑줄 설정*/
+.side-dropdown-nav .sub-menu {
+    display: none;
+}
+
+/* 메뉴 2의 색상 배경 색상, 블럭 설정 */
+.side-dropdown-nav .dropdown:hover  .sub-menu {
+    display: block;
+    background-color:  rgb(43, 42, 42);
+}
+
+/* 메뉴 2의 서브 메뉴 블릿 설정*/
+.side-dropdown-nav .sub-menu {
+    list-style-type: none;
+}
+
+/* 메뉴 2의 서브 메뉴의 스타일 설정*/
+.side-dropdown-nav .sub-menu .sub-link {
+    text-decoration: none;
+    color: white;
+    padding: 6px;
+    display: block;
+}
+
+/* 메뉴 2의 서브메뉴의 호버 설정 */
+.side-dropdown-nav .sub-menu .sub-link:hover {
+    color: rgb(183, 183, 183);
+}
