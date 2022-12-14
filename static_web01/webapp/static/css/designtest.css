@@ -1,0 +1,101 @@
+.login-tilte {
+    font-size: 2em;
+    font-weight: 1.5em;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 1em 1em 0.2em 1em;
+}
+
+.login-box {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(202, 202, 202, 0.884);
+    padding: 3em;
+    margin: 2em;
+}
+
+.login-input-form {
+    width: 100%;
+}   
+
+.input-form-id{
+    width: 100%;
+    padding-bottom: 0.4em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(202, 202, 202, 0.884);
+}
+
+.input-form-ps{
+    width: 100%;
+    padding-top: 0.8em;
+    padding-bottom: 0.4em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(202, 202, 202, 0.884);
+}
+
+.login_state {
+    padding: 1.5em;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: small;
+    color: rgb(88, 88, 88);
+    position: relative;
+    left: -1.8em;
+    top: -0.5em;
+}
+
+label {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 1.5em;
+    vertical-align: top;
+    color: black;
+}
+
+/* 체크 박스 모양 변경*/
+.login_state .checkbox-form {
+    display: inline-block;
+}
+
+.btn_login {
+    width: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(254, 229, 0);
+    margin-bottom: 1em;
+}
+
+/*또는*/ 
+
+.btn_qrlogin {
+    width: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(230, 230, 230, 0.959);
+    margin-top: 1em;
+}
+
+.login-foot {
+    font-size: 0.7em;
+    padding-top: 1.5em;
+}
+
+.login-foot a {
+    text-decoration: none;
+    color: black;
+}
+
+.login-foot .left {
+    display: inline-block;
+    box-sizing: border-box;
+    float: right;
+}
+
+
+
