@@ -1,0 +1,212 @@
+/* 모든 태그의 속성을 초기화 */
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;  
+}
+
+/* fallback */
+/*자물쇠 아이콘 css*/
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v75/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1n-q_4MrImHCIJIZrDCvHOej.woff2) format('woff2');
+  }
+  
+  .icon {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+
+/*배경색상*/
+body {
+    background-color: rgb(245, 246, 247);
+}
+
+
+/*가운데 정렬 : 반드시 너비 설정 해야 margin auto 설정 가능*/
+.container-center {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*로고 타이틀 위치 설정*/
+.logo-title {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*로고 폰트 설정*/
+.logo-title .logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: rgb(0, 200, 80);
+    letter-spacing: -0.05em;
+}
+
+/*섹션 안의 3개의 그룹 사이의 아래 마진 설정*/
+.input-form-group {
+    margin-bottom: 0.8em;
+}
+
+/*모든 입력 관련 박스 크기 설정*/
+.input-group label,
+.input-group input,
+.input-group select {
+    display: inline-block;
+    width: 100%;
+}
+
+/*모든 입력문구 폰트 설정*/
+.input-group label {
+    font-size: 0.9em;
+    font-weight: bolder;
+    letter-spacing: 0.05em;
+    padding-bottom: 0.5em;
+}
+
+/*입력 창을 스타일 설정 */
+.input-form {
+    display: inline-block;
+    width: 100%;
+    padding: 0.8em;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 212, 212);
+}
+
+/*input-group 들 사이의 여백 */
+.input-group {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0.8em;
+}
+
+/* 모든 입력 창 위치 설정*/
+.input-form input,
+.input-form select {
+    display: inline-block;
+    border-style: none;
+    outline-style: none;
+}
+
+/*아이디, 비밀번호, 비밀번호 재확인 input 창 테두리 설정*/
+.input-icon {
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 212, 212);
+
+}
+
+/*input 창과 span을 블럭으로 처리하기*/
+.input-icon .input-form{
+    float: left;
+    width: 75%;
+    border-style: none;
+}
+
+/*span 스타일 적용*/
+.input-icon span {
+    display: block;
+    float: right;
+    background-color: white;
+    position: relative;
+    top: 12px;
+    color: rgb(129, 129, 129);
+    padding-right: 0.5em;
+}
+
+/*생년월일 3개 input 크기 조절*/
+.input-inline input,
+.input-inline select,
+.input-inline button {
+    display: inline-block;
+    width: 32.5%;
+    padding: 1em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 212, 212);
+    outline-style: none;
+}
+
+/*전화번호 input 창 크기 조절*/
+.input-inline .inline-w2 {
+    width: 66.25%;
+    height: 53px;
+}
+
+
+/*가입하기 버튼 위치 설정*/
+.button-form {
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2.5em;
+}
+
+/*가입하기 버튼 크기 설정*/
+.button-form button {
+    display: block;
+    width: 100%;
+    padding: 1em;
+}
+
+/*모든 버튼 테두리 스타일 설정*/
+button {
+    border-style: none;
+    border-width: 0;
+}
+
+/*인증받기 버튼 스타일 속성*/
+.btn-green {
+    background-color: rgb(0, 200, 80);
+    color: white;   
+    outline-style: none;
+    font-size: large;
+    
+}
+
+/*인증번호 input 창 비활성화*/
+.disabled {
+    background-color: rgb(246, 247, 247);
+}
+
+/*footer 위치 설정*/
+footer {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/*a 태크 스타일 설정*/
+footer a {
+    text-decoration: none;
+    color: rgb(129, 129, 129);
+}
+
+/*footer font 크기 변경*/
+.policy-link {
+    font-size: 0.7em;
+}
+
+.corp {
+    font-size: 0.7em;
+}
