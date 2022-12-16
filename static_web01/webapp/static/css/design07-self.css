@@ -1,0 +1,127 @@
+[type=radio] ~ .hidden-context {
+    display: none;
+}
+
+[type=radio]:checked ~ .hidden-context {
+    display: block;
+}
+
+/*모든 태그의 스타일 속성 초기화*/
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+/*상단 로고, 내정보 설정*/
+.imp {
+    background-color: rgba(53, 59, 73, 0.959);
+    height: 2em;
+    border-bottom-width: 0.05px;
+    border-bottom-style: solid;
+    border-color: rgb(104, 103, 103);
+}
+
+.imp a {
+    text-decoration: none;
+    position: relative;
+    left: 1em;
+    top: 0.2em;
+}
+
+.imp .logo {
+    color: rgb(0, 200, 80);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    font-size: 0.9em;
+}
+
+.imp .myimp {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    font-size: 0.8em;
+}
+
+/*상단 아이디, 비밀번호 찾기*/
+.top-found {
+    background-color: rgb(98, 191, 38);
+    height: 3.5em;
+    border-bottom-width: 0.05px;
+    border-bottom-style: solid;
+    border-color: rgb(104, 103, 103);
+}
+
+.top-found .text {
+    text-align: center;
+    color: rgba(128, 128, 128, 0.308);
+    padding: 1em;
+}
+
+.top-found a {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.top-found .top-id {
+    color: rgb(216, 231, 5);
+    margin-right: 3.5em;
+}
+
+.top-found .top_ps {
+    color: rgb(221, 234, 215);
+    margin-left: 3.5em;
+}
+
+/*container 속성 설정*/
+.container {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5em;
+}
+
+/*아이디 찾기 선택*/
+.found .found_id {
+    font-size: 1em;
+    font-weight: 900;
+    color: rgba(59, 59, 59, 0.87);
+    padding-bottom: 0.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*다음 버튼*/
+.button-form .next-button {
+    display: block;
+    width: 60px;
+    height: 35px;
+    margin-top: 1em;
+    background-color: rgba(249, 249, 250, 0.966);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(190, 190, 190);
+    border-radius: 3px;
+    position: relative;
+    left: 50%;
+}
+
+/*footer 박스 속성 설정*/
+footer {
+    text-align: left;
+    padding-top: 2em;
+    width: 90%;
+
+}
+
+.all_q a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: 0.8em;
+    color: rgb(87, 87, 87);
+}
+
+.all_q .question {
+    padding-bottom: 0.6em;
+}
