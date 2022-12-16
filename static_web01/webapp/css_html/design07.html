@@ -6,88 +6,100 @@
     <link type="text/css" rel="stylesheet" href="/static/css/design07.css">
 </head>
 <body>
-    <div>
-        <header>
-            <div class="imp">
-                <a class="logo" href="#">NAVER</a>
-                <a class="myimp" href="#">내정보</a>
-            </div>
-            <div class="top-found">
-                <div class="text">
-                    <a class="top-id" href="#">아이디찾기</a> |
-                    <a class="top_ps" href="#">비밀번호찾기</a>
+    <header>
+        <nav class="top-nav-menu">
+            <div class="floating-menu">
+                <div class="float-left">
+                    <a class="float-menu-link" href="https://naver.com">
+                         <img src="https://static.nid.naver.com/images/web/user/tit_logo.png">
+                         내정보
+                    </a> 
                 </div>
-            </div>
-        </header>
-        <div class="container">
-        <section>
-            <div>
-                <div class="found">
-                    <h1 class="found_id">아이디찾기</h1>
-                    <hr>
-                    <hr>
-                    <p class="found_id_select">아이디 찾는 방법을 선택해 주세요.</p>
+                <div class="float-right">
+                    <button class="btn btn-dark btn-sm">로그인</button>
+                    <span class="icon icon-btn icon-white icon-sm">apps</span>
                 </div>
-                <div class="box1">
-                    <div class="box1_1">
-                        <div>
-                            <input type="radio" name="rdo1" id="id_rdo1">
-                            <label for="id_rdo1">라디오 버튼 1</label>
-                            <div class="hidden-context">
-                                <input type="text" value="숨겨진 사용자 입력"><br>
-                                <input type="text" value="라디오 버튼이 체크되면 활성화 되어 보입니다.">
+                <div class="float-clear"></div>
+            </div>
+        </nav>
+        <nav class="green-nav">
+            <div class="container-center">
+                <div class="menu v-center">
+                    <div class="menu-item">
+                        <span class="icon icon-lg">person</span>
+                        <a class="menu-link" href="#"> 아이디 찾기</a>
+                    </div>
+                    <div class="menu-item">
+                        <span class="icon">lock</span> 
+                        <a class="menu-link" href="#">비밀번호 찾기</a>
+                    </div>
+                 </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-center">
+        <section class="container-main" >
+            <div class="section">
+                <div class="section-name">아이디찾기</div>
+                <div class="section-context">아이디 찾는 방법을 선택해 주세요.</div>
+            </div>
+            <div class="container-border">
+                <div class="hide-seek-menu">
+                    <div class="hide-seek-item">
+                        <input type="radio" name="rdo1" id="id_rdo_a">
+                        <label for="id_rdo_a">회원정보에 등록한 휴대전화로 인증</label>
+                        <div class="hidden-context">
+                            <p class="context">회원정보에 등록한 휴대전화 번호와 입력한 휴대전화가 같아야, 인증번호를 받을 수 있습니다.</p>
+                            <div class="input-form">
+                                <div class="input-group">
+                                    <label class="input-label" for="">이름</label>
+                                    <input type="text">
+                                </div>
+                                <div class="input-group">
+                                    <label class="input-label" for="">휴대전화</label>
+                                    <select class="w60">
+                                        <option>+82</option>
+                                    </select>
+                                    <input class="w120" type="text">
+                                    <button>인증번호 받기</button>
+                                </div>
+                                <div class="input-group">
+                                    <label class="input-label" for=""></label>
+                                    <input type="text">
+                                    <label class="info-label" v-center>인증번호가 오지 않나요.
+                                        <span class="icon">help</span>
+                                    </label>    
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <div class="box1_2">
-                        <input type="radio" name="rdo1" id="id_rdo2">
-                        <label for="id_rdo2">라디오 버튼 2</label>
-                        <div class="hidden-context">
-                            <input type="text" value="숨겨진 사용자 입력"><br>
-                            <input type="text" value="라디오 버튼이 체크되면 활성화 되어 보입니다.">
-                        </div>
-                    </div>
-                </div>
-                <div class="box2">
-                    <p>등록한 회원정보로 찾기 어려우시면, 본인 확인 후 아이디를 찾아드립니다.</p>
-                    <div class="box2_1">
-                        <div>
-                            <input type="radio" name="rdo1" id="id_rdo1">
-                            <label for="id_rdo1">라디오 버튼 1</label>
-                            <div class="hidden-context">
-                                <input type="text" value="숨겨진 사용자 입력"><br>
-                                <input type="text" value="라디오 버튼이 체크되면 활성화 되어 보입니다.">
+                    <div class="hide-seek-item"></div>
+                    <input type="radio" name="rdo1" id="id_rdo_b"  checked>
+                    <label for="id_rdo_b">본인확인 이메일로 인증</label>
+                    <div class="hidden-context">
+                        <p class="context">본인확인 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.</p>
+                        <div class="input-form">
+                            <div class="input-group">
+                                <label class="input-label">이름</label>
+                                <input type="text">
+                            </div>
+                            <div class="input-group">
+                                <label class="input-label">이메일 주소</label>
+                                <input type="text">
+                                <button>인증번호 받기</button>
+                            </div>
+                            <div class="input-group">
+                                <label class="input-label"></label>
+                                <input type="text">
+                                <label class="info-label v-center">인증번호가 오지 않나요.
+                                <span class="icon">help</span>
+                            </label>
                             </div>
                         </div>
                     </div>
-                    <div class="box2_2">
-                        <input type="radio" name="rdo1" id="id_rdo2">
-                        <label for="id_rdo2">라디오 버튼 2</label>
-                        <div class="hidden-context">
-                            <input type="text" value="숨겨진 사용자 입력"><br>
-                            <input type="text" value="라디오 버튼이 체크되면 활성화 되어 보입니다.">
-                        </div>
-                    </div>
-                </div>
-                <div class="button-form">
-                    <button class="next-button" type="button">다음</button>
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="all_q">
-                <div class="question">
-                    <a>단체 아이디 찾기 시 문제가 있나요?</a>
-                    <a href="#">상세내용 펼치기 ▼</a>
-                </div>
-                <div class="question">
-                    <a>아이디 찾기 시 문제가 있나요?</a>
-                    <a href="#">바로가기 ▶</a>
-                </div>
-             </div>
-        </footer>
-     </div>
     </div>
 </body>
 </html>
