@@ -1,0 +1,111 @@
+/*공지사항 작성하기 설정*/
+.notice-wirte-title{
+    background-color: white;
+    position: absolute;
+    top: -2px;
+    left: 20px;
+    z-index: 2;
+}
+
+/*박스 설정하기*/
+.notice-box {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 720px;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+/*input, button 라벨들 설정*/
+label {
+    font-weight: bold;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 70px;
+    text-align: center;
+}
+
+/*제목, input 박스 설정 */
+.notice-title
+, .notice-content {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 0.3em;
+}
+
+/*input 크기 설정*/
+.name-input,
+.content-input {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 300px;
+}
+
+/*내용 글자 위치 설정*/
+.name-content {
+    position: relative;
+    top: -4em;
+}
+
+/*버튼 안 폰트 사이즈 설정*/
+button {
+    font-size: 16px;
+}
+
+/*작성하기 버튼 설정*/
+.notice-btn {
+    margin-top: 1em;
+    position: relative;
+    left: 9.5em;
+}
+
+
+
+/*표 크기 설정*/
+.projecttable {
+    width: 720px;
+    height: 250px;
+    font-size: 15px;
+}
+
+
+/*상단, 하단 스타일 설정*/
+.top, .bottom {
+    background-color: rgb(250, 163, 131);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.top {
+    height: 40px;
+}
+
+.middle {
+    background-color: rgb(246, 247, 225);
+}
+
+.c1 {
+    width: 5%;
+}
+
+.c2 {
+    width: 45%;
+}
+
+.c3 {
+    width: 12%
+}
+
+.c6 {
+    width: 7%;
+}
+
+.projecttable button {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
