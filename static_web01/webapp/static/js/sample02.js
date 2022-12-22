@@ -20,14 +20,14 @@ function getListItems() {
 }
 
 /* 1월 ~ 12월 까지 생성합니다. 현재월이 select 태그에 초기 선택되어 나와야 합니다. */
-function createMonth(id) {
+function createMonths(id) {
     var selectTag = document.getElementById(id);
     var date = new Date();
     var currentMonth = date.getMonth();
 
     var optionTags = "";
     for(let m = 1; m <= 12; m++) {
-       optionTags += m === currunetMonth + 1 ? "<option selected>" : "<option>";
+       optionTags += m === currentMonth + 1 ? "<option selected>" : "<option>";
        optionTags += m + "월</option>";
     }
 
