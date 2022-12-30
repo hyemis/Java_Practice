@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link type="text/javascript" rel="stylesheet" href="/static/js/sample12.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container border border-secondary">
+                <a class="navbar-brand text-reset" href="#">
+                   로고
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-menu">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link m-2" href="#">메뉴1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-2" href="#">메뉴2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-2" href="#">메뉴3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-2" href="#">메뉴4</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <li class="menu-item dropdown list-unstyled">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        개인설정
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">개인 정보</a></li>
+                            <li><a class="dropdown-item" href="#">개인설정 메뉴2</a></li>
+                            <li><a class="dropdown-item" href="#">개인설정 메뉴3</a></li>
+                        </ul>
+                   </li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <div class="container">
+            <div class="row">
+                    <div class="impo col-2 border border-secondary">
+                        <div class="border-bottom border-dark mx-auto">
+                            <p class="font-weight-bold" style="position: relative; bottom: -0.8em;">개인 정보</p>
+                        </div>
+                        <div class="list-group">
+                            <button type="button" class="btn btn-link active text-reset" aria-pressed="true">기본 정보</button>
+                            <button type="button" class="btn btn-link text-reset ">집/회사 주소</button>
+                            <button type="button" class="btn btn-link text-reset">분류 3</button>
+                            <button type="button" class="btn btn-link text-reset">분류 4</button>
+                            <button type="button" class="btn btn-link text-reset">분류 5</button>
+                        </div>
+                    </div>
+                    <div class="impo col-8 border border-secondary">
+                        <div class="impo-center">
+                            <div class="impo-top">
+                                <div class="separate1 pt-4 pl-2 mb-3">
+                                    <h5>분류 1</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="serch-form col-6">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control ml-1 mr-1"placeholder="검색어" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                            <div class="input-group-append">
+                                              <button class="btn btn-outline-secondary" type="button" id="button-addon2">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="serch-empty col-3"></div>
+                                    <div class="choose col-3">
+                                        <select class="form-control form-control-sm">
+                                            <option>5개</option>
+                                            <option selected>10개</option>
+                                            <option>15개</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid p-1">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">컬럼1</th>
+                                        <th scope="col">컬럼2</th>
+                                        <th scope="col">컬럼3</th>
+                                        <th scope="col">컬럼4</th>
+                                        <th scope="col">컬럼5</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                      </tr>
+                                      <tr>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                      </tr>
+                                      <tr>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                      </tr>
+                                      <tr>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                      </tr>
+                                      <tr>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                      </tr>
+                                      <tr>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                        <td>값</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <div class="PageNumber mt-1">
+                                <nav aria-label="Page navigation example ">
+                                    <ul class="pagination justify-content-center">
+                                      <li class="page-item">
+                                        <a class="page-link text-reset" href="#" aria-label="Previous">
+                                          <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                      </li>
+                                      <li class="page-item"><a class="page-link text-reset" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link text-reset" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link text-reset" href="#">3</a></li>
+                                      <li class="page-item"><a class="page-link text-reset" href="#">4</a></li>
+                                      <li class="page-item"><a class="page-link text-reset" href="#">5</a></li>
+                                      <li class="page-item"><a class="page-link text-reset" href="#">6</a></li>
+                                      <li class="page-item"><a class="page-link text-reset" href="#">7</a></li>
+                                      <li class="page-item"><a class="page-link text-reset" href="#">8</a></li>
+                                      <li class="page-item">
+                                        <a class="page-link text-reset" href="#" aria-label="Next">
+                                          <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="impo col-2 border border-secondary">
+                        <div class="border-bottom border-dark mx-auto">
+                            <p class="font-weight-bold"  style="position: relative; bottom: -0.8em;">구역 2</p>
+                        </div>
+                        
+                        <div class="list-group">
+                            <button type="button" class="btn btn-link active text-reset" aria-pressed="true">분류 1</button>
+                            <button type="button" class="btn btn-link text-reset ">분류 2</button>
+                            <button type="button" class="btn btn-link text-reset">분류 3</button>
+                            <button type="button" class="btn btn-link text-reset">분류 4</button>
+                            <button type="button" class="btn btn-link text-reset">분류 5</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="container mt-1">
+                <div class="footer">
+                    <div class="border border-secondary pt-2" style="font-size: 12px; color: gray;" >
+                        <p class="font-weight-lighter text-right">Copyright 2022. xxxxx Co. all rights reserved.</p>
+                    </div>
+                </div>
+        </div>
+    </footer>
+</body>
+</html>
